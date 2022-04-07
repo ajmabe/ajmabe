@@ -14,7 +14,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 711px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -59,7 +59,12 @@
 			//////////////////////////////////////////////////////////////////
 			/////////////////// YOUR CODE BELOW HERE /////////////////////////
 			//////////////////////////////////////////////////////////////////
-			
+			function create(x, y, scaleX, scaleY, immovable) {
+    var platform = game.platforms.create(x, y, 'platform');
+    platform.scale.setTo(scaleX || 1, scaleY || 1);
+    platform.body.immovable = immovable || true;
+    return platform;
+}
 			// TODO 2 - Variable declarations 
 			
 
